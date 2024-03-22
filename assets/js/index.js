@@ -416,6 +416,6 @@ Project Link: [https://github.com/${response.gitHubUsername}/${response.repoName
     fs.WriteFile("README.md", formattedResponse, (err) =>
       err
         ? console.error(colors.red(err))
-        : console.log(colors.green("Success!"))
+        : console.log(colorsgreen("Success!"))
     );
   });
