@@ -96,26 +96,24 @@ inquirer
     },
   ])
   .then((response) => {
+    console.log(response);
     const npm = "```";
     const npmSingle = "`";
     if (response.libraries.length === 0) {
-      const librariesFormat = "";
-      return librariesFormat;
+      librariesFormat = "";
     } else if (response.libraries.length === 1) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url`;
-      return librariesFormat;
     } else if (response.libraries.length === 2) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url]
 - [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
         response.libraries[1].split(".")[0]
       }-url]`;
-      return librariesFormat;
     } else if (response.libraries.length === 3) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url]
 - [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
@@ -124,9 +122,8 @@ inquirer
 - [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
         response.libraries[2].split(".")[0]
       }-url]`;
-      return librariesFormat;
     } else if (response.libraries.length === 4) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url]
 - [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
@@ -138,9 +135,8 @@ inquirer
 - [![${response.libraries[3].split(".")[0]}][${response.libraries[0]}]][${
         response.libraries[3].split(".")[0]
       }-url]`;
-      return librariesFormat;
     } else if (response.libraries.length === 5) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url]
 - [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
@@ -155,9 +151,8 @@ inquirer
 - [![${response.libraries[4].split(".")[0]}][${response.libraries[0]}]][${
         response.libraries[4].split(".")[0]
       }-url]`;
-      return librariesFormat;
     } else if (response.libraries.length === 6) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url]
 - [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
@@ -175,9 +170,8 @@ inquirer
 - [![${response.libraries[5].split(".")[0]}][${response.libraries[0]}]][${
         response.libraries[5].split(".")[0]
       }-url]`;
-      return librariesFormat;
     } else if (response.libraries.length === 7) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url]
 - [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
@@ -198,9 +192,8 @@ inquirer
 - [![${response.libraries[6].split(".")[0]}][${response.libraries[0]}]][${
         response.libraries[6].split(".")[0]
       }-url]`;
-      return librariesFormat;
     } else if (response.libraries.length === 8) {
-      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+      librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
         response.libraries[0]
       }]][${response.libraries[0].split(".")[0]}-url]
 - [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
@@ -224,10 +217,9 @@ inquirer
 - [![${response.libraries[7].split(".")[0]}][${response.libraries[0]}]][${
         response.libraries[7].split(".")[0]
       }-url]`;
-      return librariesFormat;
     }
-
-    const formattedResponse = `<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+    console.log(librariesFormat);
+    formattedResponse = `<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
 <a name="readme-top"></a>
     
@@ -413,9 +405,9 @@ Project Link: [https://github.com/${response.gitHubUsername}/${response.repoName
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com`;
 
-    fs.WriteFile("README.md", formattedResponse, (err) =>
+    fs.writeFile("README.md", formattedResponse, (err) =>
       err
         ? console.error(colors.red(err))
-        : console.log(colorsgreen("Success!"))
+        : console.log(colors.green("Success!"))
     );
   });
