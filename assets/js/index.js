@@ -51,7 +51,7 @@ inquirer
     },
     {
       type: "input",
-      message: colors.brightMagenta("Screenshot:"),
+      message: colors.brightMagenta("Screenshot file name:"),
       name: "screenshot",
     },
     {
@@ -98,11 +98,135 @@ inquirer
   .then((response) => {
     const npm = "```";
     const npmSingle = "`";
-    // trying to write a for loop or use a advanced array method to provide a string for whatever libraries are selected
+    if (response.libraries.length === 0) {
+      const librariesFormat = "";
+      return librariesFormat;
+    } else if (response.libraries.length === 1) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url`;
+      return librariesFormat;
+    } else if (response.libraries.length === 2) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url]
+- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[1].split(".")[0]
+      }-url]`;
+      return librariesFormat;
+    } else if (response.libraries.length === 3) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url]
+- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[1].split(".")[0]
+      }-url]
+- [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[2].split(".")[0]
+      }-url]`;
+      return librariesFormat;
+    } else if (response.libraries.length === 4) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url]
+- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[1].split(".")[0]
+      }-url]
+- [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[2].split(".")[0]
+      }-url]
+- [![${response.libraries[3].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[3].split(".")[0]
+      }-url]`;
+      return librariesFormat;
+    } else if (response.libraries.length === 5) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url]
+- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[1].split(".")[0]
+      }-url]
+- [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[2].split(".")[0]
+      }-url]
+- [![${response.libraries[3].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[3].split(".")[0]
+      }-url]
+- [![${response.libraries[4].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[4].split(".")[0]
+      }-url]`;
+      return librariesFormat;
+    } else if (response.libraries.length === 6) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url]
+- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[1].split(".")[0]
+      }-url]
+- [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[2].split(".")[0]
+      }-url]
+- [![${response.libraries[3].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[3].split(".")[0]
+      }-url]
+- [![${response.libraries[4].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[4].split(".")[0]
+      }-url]
+- [![${response.libraries[5].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[5].split(".")[0]
+      }-url]`;
+      return librariesFormat;
+    } else if (response.libraries.length === 7) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url]
+- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[1].split(".")[0]
+      }-url]
+- [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[2].split(".")[0]
+      }-url]
+- [![${response.libraries[3].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[3].split(".")[0]
+      }-url]
+- [![${response.libraries[4].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[4].split(".")[0]
+      }-url]
+- [![${response.libraries[5].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[5].split(".")[0]
+      }-url]
+- [![${response.libraries[6].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[6].split(".")[0]
+      }-url]`;
+      return librariesFormat;
+    } else if (response.libraries.length === 8) {
+      const librariesFormat = `- [![${response.libraries[0].split(".")[0]}][${
+        response.libraries[0]
+      }]][${response.libraries[0].split(".")[0]}-url]
+- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[1].split(".")[0]
+      }-url]
+- [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[2].split(".")[0]
+      }-url]
+- [![${response.libraries[3].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[3].split(".")[0]
+      }-url]
+- [![${response.libraries[4].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[4].split(".")[0]
+      }-url]
+- [![${response.libraries[5].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[5].split(".")[0]
+      }-url]
+- [![${response.libraries[6].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[6].split(".")[0]
+      }-url]
+- [![${response.libraries[7].split(".")[0]}][${response.libraries[0]}]][${
+        response.libraries[7].split(".")[0]
+      }-url]`;
+      return librariesFormat;
+    }
 
-    // const librariesFormatted = for(i=0;i>response.libraries.length;i++){
-
-    // };
     const formattedResponse = `<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
 <a name="readme-top"></a>
@@ -117,30 +241,20 @@ inquirer
 <br />
 <div align="center">
   <a href="https://github.com/${response.gitHubUsername}/${response.repoName}">
-    <img src="./readMeImages/${
-      response.logo
-    }" alt="Logo" width="80" height="80">
+    <img src="./readMeImages/${response.logo}" alt="Logo" width="80" height="80">
   </a>
   
   <h3 align="center">${response.projectTitle}</h3>
   <p align="center">${response.projectDescription}
     <br />
-    <a href="https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/${response.gitHubUsername}/${response.repoName}"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }">View Demo</a>
+    <a href="https://github.com/${response.gitHubUsername}/${response.repoName}">View Demo</a>
     ·
-    <a href="https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/issues">Report Bug</a>
+    <a href="https://github.com/${response.gitHubUsername}/${response.repoName}/issues">Report Bug</a>
         ·
-    <a href="https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/issues">Request Feature</a>
+    <a href="https://github.com/${response.gitHubUsername}/${response.repoName}/issues">Request Feature</a>
   </p>
 </div>
     
@@ -177,30 +291,7 @@ inquirer
     
 ### Built With
     
-- [![${response.libraries[0].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[0].split(".")[0]
-    }-url]
-- [![${response.libraries[1].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[1].split(".")[0]
-    }-url]
-- [![${response.libraries[2].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[2].split(".")[0]
-    }-url]
-- [![${response.libraries[3].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[3].split(".")[0]
-    }-url]
-- [![${response.libraries[4].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[4].split(".")[0]
-    }-url]
-- [![${response.libraries[5].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[5].split(".")[0]
-    }-url]
-- [![${response.libraries[6].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[6].split(".")[0]
-    }-url]
-- [![${response.libraries[7].split(".")[0]}][${response.libraries[0]}]][${
-      response.libraries[7].split(".")[0]
-    }-url]
+${librariesFormat}
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
@@ -222,9 +313,7 @@ Install all dependencies with the command below.
 1. Get a free API Key at [https://${response.url}](https://${response.url})
 2. Clone the repo
   ${npm}sh
-  git clone https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }.git
+  git clone https://github.com/${response.gitHubUsername}/${response.repoName}.git
   ${npm}
 3. Install NPM packages
   ${npm}sh
@@ -250,9 +339,7 @@ _For more examples, please refer to the [Documentation](${response.url})_
 - [ ] ${response.roadmap}
   - [ ] Nested Feature
     
-See the [open issues](https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/${response.gitHubUsername}/${response.repoName}/issues) for a full list of proposed features (and known issues).
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
@@ -277,15 +364,11 @@ Distributed under the MIT License. See ${npmSingle}LICENSE.txt${npmSingle} for m
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
-## Contact
+## Questions/Contact
     
-${response.name} - [@${response.twitterHandle}](https://twitter.com/${
-      response.twitterHandle
-    }) - ${response.email}
+${response.name} - [@${response.twitterHandle}](https://twitter.com/${response.twitterHandle}) - ${response.email}
     
-Project Link: [https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }](https://github.com/${response.gitHubUsername}/${response.repoName})
+Project Link: [https://github.com/${response.gitHubUsername}/${response.repoName}](https://github.com/${response.gitHubUsername}/${response.repoName})
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
@@ -300,36 +383,16 @@ Project Link: [https://github.com/${response.gitHubUsername}/${
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
     
-[contributors-shield]: https://img.shields.io/github/contributors/${
-      response.gitHubUsername
-    }/${response.repoName}.svg?style=for-the-badge
-[contributors-url]: https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/${
-      response.gitHubUsername
-    }/${response.repoName}.svg?style=for-the-badge
-[forks-url]: https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/network/members
-[stars-shield]: https://img.shields.io/github/stars/${
-      response.gitHubUsername
-    }/${response.repoName}.svg?style=for-the-badge
-[stars-url]: https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/stargazers
-[issues-shield]: https://img.shields.io/github/issues/${
-      response.gitHubUsername
-    }/${response.repoName}.svg?style=for-the-badge
-[issues-url]: https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/issues
-[license-shield]: https://img.shields.io/github/license/${
-      response.gitHubUsername
-    }/${response.repoName}.svg?style=for-the-badge
-[license-url]: https://github.com/${response.gitHubUsername}/${
-      response.repoName
-    }/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/${response.gitHubUsername}/${response.repoName}.svg?style=for-the-badge
+[contributors-url]: https://github.com/${response.gitHubUsername}/${response.repoName}/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/${response.gitHubUsername}/${response.repoName}.svg?style=for-the-badge
+[forks-url]: https://github.com/${response.gitHubUsername}/${response.repoName}/network/members
+[stars-shield]: https://img.shields.io/github/stars/${response.gitHubUsername}/${response.repoName}.svg?style=for-the-badge
+[stars-url]: https://github.com/${response.gitHubUsername}/${response.repoName}/stargazers
+[issues-shield]: https://img.shields.io/github/issues/${response.gitHubUsername}/${response.repoName}.svg?style=for-the-badge
+[issues-url]: https://github.com/${response.gitHubUsername}/${response.repoName}/issues
+[license-shield]: https://img.shields.io/github/license/${response.gitHubUsername}/${response.repoName}.svg?style=for-the-badge
+[license-url]: https://github.com/${response.gitHubUsername}/${response.repoName}/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/${response.linkedInUsername}
 [product-screenshot]: ./assets/images/${response.screenshot}
@@ -350,7 +413,7 @@ Project Link: [https://github.com/${response.gitHubUsername}/${
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com`;
 
-    fs.appendFile("README.md", formattedResponse, (err) =>
+    fs.WriteFile("README.md", formattedResponse, (err) =>
       err
         ? console.error(colors.red(err))
         : console.log(colors.green("Success!"))

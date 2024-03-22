@@ -1,25 +1,6 @@
-# autoReadMe
-
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
 <a name="readme-top"></a>
-
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -28,17 +9,15 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/Meyerst19/autoReadMe">
-    <img src="./assets/images/windrushDarlaFire.JPG" alt="Logo" width="80" height="80">
+     <img src="./images/windrushDarlaFire.JPG" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Auto Generated README</h3>
 
-  <p align="center">
-    Using command terminal inputs to auto generate the README file for any project!
+  <p align="center">Using command terminal inputs to auto generate the README file for any project!
     <br />
     <a href="https://github.com/Meyerst19/autoReadMe"><strong>Explore the docs »</strong></a>
     <br />
@@ -51,7 +30,6 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -77,39 +55,29 @@
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
-
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://meyerst19.github.io/TaskBoard/)
+<div align="center">
+ <a href="https://github.com/Meyerst19/autoReadMe">
+     <img src="./images/autoReadMeScreenShot.png" alt="screenshot">
+  </a>
+</div>
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username` - Meyerst19, `repo_name` - autoReadMe, `twitter_handle`, @mathnerd19 `linkedin_username` - tylersmeyers, `email_client` - gmail, `email` - tyler.s.meyers, `project_title` - Auto Generated README, `project_description` - Using command terminal inputs to auto generate the README file for any project!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- [![Next][Next.js]][Next-url]
-- [![React][React.js]][React-url]
-- [![Vue][Vue.js]][Vue-url]
-- [![Angular][Angular.io]][Angular-url]
-- [![Svelte][Svelte.dev]][Svelte-url]
-- [![Laravel][Laravel.com]][Laravel-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+- [![JavaScript][JavaScript]][JavaScript]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+colors, inquirer
 
 - npm
   ```sh
@@ -118,53 +86,36 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://meyerst19.github.io/TaskBoard/](https://meyerst19.github.io/TaskBoard/)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/Meyerst19/autoReadMe.git
+    git clone https://github.com/Meyerst19/autoReadMe.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
+    npm install
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Much needed soloution for the developer who wants to focus on codeing and not creating README files. In your terminal navigate to the cloned repo and then provide the command `node index.js`. Response to all the prompts and a README file will be created . Once it has been created you can manually make any the final touches if desired and then attached to your project directtory .
 
-_For more examples, please refer to the [Documentation](https://meyerst19.github.io/TaskBoard/)_
+_For more examples, please refer to the [Documentation](n/a)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
-
 ## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
 
 See the [open issues](https://github.com/Meyerst19/autoReadMe/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -174,15 +125,11 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
-
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
 
 ## Contact
 
@@ -192,13 +139,9 @@ Project Link: [https://github.com/Meyerst19/autoReadMe](https://github.com/Meyer
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
-
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+- [https://github.com/otheildrew/BEST-README-Template/pull/73](https://github.com/otheildrew/BEST-README-Template/pull/73)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,7 +160,7 @@ Project Link: [https://github.com/Meyerst19/autoReadMe](https://github.com/Meyer
 [license-url]: https://github.com/Meyerst19/autoReadMe/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/tylersmeyers
-[product-screenshot]: ./assets/images/autoReadMeScreenShot.png
+[product-screenshot]: ./assets/images/autoReadMeScreenShot
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
