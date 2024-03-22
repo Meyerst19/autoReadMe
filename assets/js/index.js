@@ -394,7 +394,7 @@ If you have a suggestion that would make this better, please fork the repo and c
     
 ## License
     
-Distributed under the MIT License. See ${npmSingle}LICENSE.txt${npmSingle} for more information.
+Distributed under the ${response.license}. See ${npmSingle}LICENSE.txt${npmSingle} for more information.
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
@@ -408,9 +408,8 @@ Project Link: [https://github.com/${response.gitHubUsername}/${response.repoName
     
 ## Acknowledgments
     
-- [${response.acknowlegments}]()
-- []()
-- []()
+${response.acknowlegments}
+
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
