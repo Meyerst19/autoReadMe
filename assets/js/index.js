@@ -88,7 +88,7 @@ inquirer
     },
     {
       type: "input",
-      message: colors.brightMagenta("Logo:"),
+      message: colors.brightMagenta("Logo file name:"),
       name: "logo",
     },
     {
@@ -113,8 +113,8 @@ inquirer
     },
     {
       type: "input",
-      message: colors.brightMagenta("Roadmap Features:"),
-      name: "roadmap",
+      message: colors.brightMagenta("Test instructions:"),
+      name: "test",
     },
     {
       type: "input",
@@ -269,7 +269,7 @@ inquirer
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![${response.license}][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
     
 <br />
@@ -293,7 +293,7 @@ inquirer
 </div>
     
 <details>
-  <summary>Table of Contents</summary>
+  <summary id="readme-top">Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -309,17 +309,21 @@ inquirer
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#tests">Tests</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#questions">Questions</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
     
 ## About The Project
     
-[![Product Name Screen Shot][product-screenshot]](https://${response.url})
+<div align="center">
+  <a href="https://github.com/${response.gitHubUsername}/${response.repoName}">
+    <img src="./readMeImages/${response.screenshot}" alt="screenshot">
+  </a>
+</div>
      
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
@@ -344,19 +348,15 @@ Install all dependencies with the command below.
     
 ### Installation
     
-1. Get a free API Key at [https://${response.url}](https://${response.url})
-2. Clone the repo
+1. Clone the repo
   ${npm}sh
   git clone https://github.com/${response.gitHubUsername}/${response.repoName}.git
   ${npm}
-3. Install NPM packages
+2. Install NPM packages
   ${npm}sh
   npm install
   ${npm}
-4. Enter your API in ${npmSingle}config.js${npmSingle}
-  ${npm}js
-  const API_KEY = "ENTER YOUR API";
-  ${npm}
+
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
@@ -368,10 +368,10 @@ _For more examples, please refer to the [Documentation](${response.url})_
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
-## Roadmap
+## Tests
     
-- [ ] ${response.roadmap}
-  - [ ] Nested Feature
+${response.test}
+
     
 See the [open issues](https://github.com/${response.gitHubUsername}/${response.repoName}/issues) for a full list of proposed features (and known issues).
     
@@ -394,11 +394,11 @@ If you have a suggestion that would make this better, please fork the repo and c
     
 ## License
     
-Distributed under the ${response.license}. See ${npmSingle}LICENSE.txt${npmSingle} for more information.
+Distributed under the ${response.license} license. See ${npmSingle}LICENSE.txt${npmSingle} for more information.
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
     
-## Questions/Contact
+## Questions
     
 ${response.name} - [@${response.twitterHandle}](https://twitter.com/${response.twitterHandle}) - ${response.email}
     
